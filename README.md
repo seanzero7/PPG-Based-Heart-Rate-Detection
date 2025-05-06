@@ -7,6 +7,7 @@ This repository contains tools for photoplethysmography (PPG) based heart rate d
 - [Workflow](#workflow)
 - [Apple Watch Reference Data](#apple-watch-reference-data)
 - [Results](#results)
+- [Conclusion](#conclusion)
 - [Data Storage](#data-storage)
 
 ## Setup
@@ -134,6 +135,30 @@ Apple Watch Average: 56.23 BPM
 Apple Watch Average: 64.30 BPM
 
 The filtered FFT plots show the frequency spectrum after applying our bandpass filter (40-180 BPM). The peak frequency, indicated by the red dashed line, represents the detected heart rate. The Apple Watch average values provide a reference for comparison and validation of our detection method.
+
+## Conclusion
+
+The comparison between our PPG-based heart rate detection and Apple Watch measurements reveals a consistent pattern of small differences, typically within a few beats per minute. This close alignment validates our methodology while highlighting several interesting aspects of heart rate monitoring:
+
+### Factors Contributing to Measurement Differences
+
+1. **Measurement Location**  
+   The Apple Watch measures heart rate at the wrist, while our system captures the PPG signal from the fingertip. These different anatomical locations experience slightly different blood flow dynamics.
+
+2. **Temporal Averaging**  
+   Apple Watch likely implements a rolling average algorithm to smooth heart rate variations over time, while our FFT analysis identifies the dominant frequency across the entire recording period.
+
+3. **Sensing Technology**  
+   Commercial devices like Apple Watch use specialized sensors optimized specifically for wearable PPG detection, whereas smartphone cameras are general-purpose optical sensors not originally designed for physiological measurements.
+
+4. **Signal Processing Approaches**  
+   Our simple but effective bandpass filter (40-180 BPM) demonstrates that relatively straightforward signal processing techniques can achieve results comparable to commercial devices with proprietary algorithms.
+
+### Implications
+
+The consistent proximity of our results to a commercial-grade device validates smartphone-based PPG as a viable approach for heart rate estimation. This opens possibilities for accessible heart rate monitoring in situations where specialized medical equipment is unavailable.
+
+The small discrepancies between measurements remind us that physiological signals naturally contain variability, and different measurement approaches may each capture slightly different aspects of the same underlying phenomenon.
 
 ## Data Storage
 

@@ -6,6 +6,7 @@ This repository contains tools for photoplethysmography (PPG) based heart rate d
 - [Setup](#setup)
 - [Workflow](#workflow)
 - [Apple Watch Reference Data](#apple-watch-reference-data)
+- [Results](#results)
 - [Data Storage](#data-storage)
 
 ## Setup
@@ -107,6 +108,32 @@ To collect similar reference data:
 3. Create a segments list with pairs of (heart_rate, end_second)
 
 This reference data is useful for validating the accuracy of our PPG-based detection.
+
+## Results
+
+Below are the filtered FFT results from our PPG-based heart rate detection compared with Apple Watch reference measurements:
+
+### Ben
+![Ben's FFT Results](Filtered_FFTs/BenFFT.png)
+Apple Watch Average: 89.53 BPM
+
+### Rachel
+![Rachel's FFT Results](Filtered_FFTs/RachelFFT.png)
+Apple Watch Average: 71.15 BPM
+
+### Sean
+![Sean's FFT Results](Filtered_FFTs/SeanFFT.png)
+Apple Watch Average: 62.37 BPM
+
+### Hubert
+![Hubert's FFT Results](Filtered_FFTs/HubertFFT.png)
+Apple Watch Average: 56.23 BPM
+
+### Logan
+![Logan's FFT Results](Filtered_FFTs/LoganFFT.png)
+Apple Watch Average: 64.30 BPM
+
+The filtered FFT plots show the frequency spectrum after applying our bandpass filter (40-180 BPM). The peak frequency, indicated by the red dashed line, represents the detected heart rate. The Apple Watch average values provide a reference for comparison and validation of our detection method.
 
 ## Data Storage
 

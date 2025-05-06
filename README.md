@@ -126,4 +126,4 @@ The CSV files maintain a consistent format with two columns:
 - `t_sec`: Time in seconds
 - `brightness`: Mean green channel value
 
-This allows for easy data sharing and consistent processing across different videos and subjects. 
+This allows for easy data sharing and consistent processing across different videos and subjects.
